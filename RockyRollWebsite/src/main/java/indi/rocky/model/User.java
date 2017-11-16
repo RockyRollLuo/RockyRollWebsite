@@ -1,11 +1,20 @@
 package indi.rocky.model;
 
-/**
- * Created by luoqi3 on 2017/11/16.
- */
+import java.util.Date;
+
 public class User {
-    private String value1;
-    private String value2;
+
+    private int id;
+    private String value1; //邮箱
+    private String value2; //密码
+
+    private String name;
+    private String sex;
+    private Date birthday;
+
+    private String selfbrief;//个人简介
+
+
 
 
 
