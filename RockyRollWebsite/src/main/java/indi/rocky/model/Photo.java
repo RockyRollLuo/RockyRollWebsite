@@ -13,6 +13,8 @@ public class Photo {
     private Date taketime;//拍摄时间
     private String place;//拍摄地点
 
+    private int type;//照片类型
+
     private ArrayList<Integer> containUids; //包含用户的id
 
     private ArrayList<String> containNames; //照片中所拥有的的人的名字

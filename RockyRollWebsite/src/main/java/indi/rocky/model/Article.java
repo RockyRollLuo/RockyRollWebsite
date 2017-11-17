@@ -9,8 +9,8 @@ public class Article {
     private String title;
     private Date time;
 
-    private String type;
-    private String mtype;
+    private String type;  //大类
+    private String mtype; //小类
 
 
 
