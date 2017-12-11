@@ -1,9 +1,10 @@
 package indi.rocky.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Photo {
+public class Photo implements Serializable {
 
     private int id; //图片id
     private int uid;//上传人ID
@@ -22,6 +23,91 @@ public class Photo {
     private ArrayList<String> tags; //照片标签
 
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public String getPhotoname() {
+        return photoname;
+    }
+
+    public void setPhotoname(String photoname) {
+        this.photoname = photoname;
+    }
+
+    public String getSavename() {
+        return savename;
+    }
+
+    public void setSavename(String savename) {
+        this.savename = savename;
+    }
+
+    public Date getSavetime() {
+        return savetime;
+    }
+
+    public void setSavetime(Date savetime) {
+        this.savetime = savetime;
+    }
+
+    public Date getTaketime() {
+        return taketime;
+    }
+
+    public void setTaketime(Date taketime) {
+        this.taketime = taketime;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public ArrayList<Integer> getContainUids() {
+        return containUids;
+    }
+
+    public void setContainUids(ArrayList<Integer> containUids) {
+        this.containUids = containUids;
+    }
+
+    public ArrayList<String> getContainNames() {
+        return containNames;
+    }
+
+    public void setContainNames(ArrayList<String> containNames) {
+        this.containNames = containNames;
+    }
+
+    public ArrayList<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(ArrayList<String> tags) {
+        this.tags = tags;
+    }
 }

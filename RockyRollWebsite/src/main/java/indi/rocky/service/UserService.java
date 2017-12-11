@@ -11,12 +11,18 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    private User user;
+    private UserDao userDao;
+
+    @Autowired
+    private LoginLogDao loginLogDao;
+
 
 
     public void saveUser(User user){
 
     }
+
+
 
 
 
