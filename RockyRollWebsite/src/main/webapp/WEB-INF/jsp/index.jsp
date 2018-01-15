@@ -36,7 +36,7 @@
             <ul id="nav" class="nav navbar-nav">
                 <li class="current"><a href="#body">首页</a></li>
                 <li><a href="#features">内容</a></li>
-                <li><a href="#works">图片</a></li>
+                <li><a href="#works">相册</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -188,7 +188,7 @@
         <div class="row">
 
             <div class="sec-title text-center">
-                <h2>图片</h2>
+                <h2>相册</h2>
                 <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
             </div>
 
