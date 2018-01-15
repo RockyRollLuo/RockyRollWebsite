@@ -1,12 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" pageEncoding="utf-8" %>
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-    <title>RockyRoll Website</title>
     <%@include file="common/head.jsp" %>
+    <title>RockyRoll Website</title>
 </head>
 <body id="body">
 
@@ -15,6 +11,7 @@
     <img src="<%=request.getContextPath()%>/resource/img/preloader.gif" alt="Preloader">
 </div>
 
+<%--=====================================header:每页的页眉================================================--%>
 <header id="navigation" class="navbar-fixed-top navbar">
     <div class="container">
         <div class="navbar-header">
@@ -28,7 +25,7 @@
             <!-- logo -->
             <a class="navbar-brand" href="#body">
                 <h1 id="logo">
-                    <img src="<%=request.getContextPath()%>/resource/img/logo.png" alt="Brandi">
+                    <img src="<%=request.getContextPath()%>/resource/img/logo.png" alt="Brandi"><%--点击可以回首页--%>
                 </h1>
             </a>
             <!-- /logo -->
@@ -37,9 +34,9 @@
         <!-- main nav -->
         <nav class="collapse navbar-collapse navbar-right" role="navigation">
             <ul id="nav" class="nav navbar-nav">
-                <li class="current"><a href="#body">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#works">Work</a></li>
+                <li class="current"><a href="#body">首页</a></li>
+                <li><a href="#features">内容</a></li>
+                <li><a href="#works">图片</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -50,10 +47,7 @@
 </header>
 
 
-<!--
-Home Slider
-==================================== -->
-
+<%--=====================================1 首页================================================--%>
 <section id="slider">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
@@ -61,6 +55,7 @@ Home Slider
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
         </ol>
         <!-- End Indicators bullet -->
 
@@ -70,10 +65,11 @@ Home Slider
             <!-- single slide -->
             <div class="item active" style="background-image: url(<%=request.getContextPath()%>/resource/img/banner.jpg);">
                 <div class="carousel-caption">
-                    <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Brandi</span>!</h2>
-                    <h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">/creative</span> one page template.</h3>
-                    <p data-wow-duration="1000ms" class="wow slideInRight animated">We are a team of professionals</p>
+                    <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> RockyRoll</span>!</h2>
+                    <h3 data-wow-duration="1000ms" class="wow slideInLeft animated"><span class="color">Happy! </span> Create Gorgous</h3>
+                    <p data-wow-duration="1000ms" class="wow slideInRight animated">Every thing is being done here</p>
 
+                    <!--联系方式-->
                     <ul class="social-links text-center">
                         <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
                         <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
@@ -87,10 +83,11 @@ Home Slider
             <!-- single slide -->
             <div class="item" style="background-image: url(<%=request.getContextPath()%>/resource/img/banner.jpg);">
                 <div class="carousel-caption">
-                    <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Meet<span> Team</span>!</h2>
-                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">/creative</span> one page template.</h3>
-                    <p data-wow-duration="500ms" class="wow slideInRight animated">We are a team of professionals</p>
+                    <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Work<span> Statatioin</span></h2>
+                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">Creative</span> is possible</h3>
+                    <p data-wow-duration="500ms" class="wow slideInRight animated">Every thing is being done here</p>
 
+                    <!--联系方式-->
                     <ul class="social-links text-center">
                         <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
                         <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
@@ -101,26 +98,35 @@ Home Slider
             </div>
             <!-- end single slide -->
 
+            <!-- single slide -->
+            <div class="item" style="background-image: url(<%=request.getContextPath()%>/resource/img/banner.jpg);">
+                <div class="carousel-caption">
+                    <h2 data-wow-duration="500ms" data-wow-delay="500ms" class="wow bounceInDown animated">Work<span> Statatioin</span></h2>
+                    <h3 data-wow-duration="500ms" class="wow slideInLeft animated"><span class="color">Creative</span> is possible</h3>
+                    <p data-wow-duration="500ms" class="wow slideInRight animated">Every thing is being done here</p>
+
+                </div>
+            </div>
+            <!-- end single slide -->
+
+
         </div>
         <!-- End Wrapper for slides -->
 
     </div>
 </section>
 
-<!--
-End Home SliderEnd
-==================================== -->
+<%--=====================================1 首页 End================================================--%>
 
-<!--
-Features
-==================================== -->
+
+<%--=====================================2 内容================================================--%>
 
 <section id="features" class="features">
     <div class="container">
         <div class="row">
 
             <div class="sec-title text-center mb50 wow bounceInDown animated" data-wow-duration="500ms">
-                <h2>Features</h2>
+                <h2>内容</h2>
                 <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
             </div>
 
@@ -132,8 +138,8 @@ Features
                     </div>
 
                     <div class="service-desc">
-                        <h3>Branding</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                        <h3>兴趣</h3>
+                        <p>代码和工程<br/></p>
                     </div>
                 </div>
             </div>
@@ -147,8 +153,8 @@ Features
                     </div>
 
                     <div class="service-desc">
-                        <h3>Development</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                        <h3>工作</h3>
+                        <p>学习内容<br/>论文研究<br/></p>
                     </div>
                 </div>
             </div>
@@ -162,8 +168,8 @@ Features
                     </div>
 
                     <div class="service-desc">
-                        <h3>Consulting</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                        <h3>娱乐</h3>
+                        <p>音乐与歌曲<br/>视频与电影<br/>文章与故事</p>
                     </div>
                 </div>
             </div>
@@ -173,35 +179,30 @@ Features
     </div>
 </section>
 
-<!--
-End Features
-==================================== -->
+<%--=====================================2 Features End================================================--%>
 
 
-<!--
-Our Works
-==================================== -->
-
+<%--=====================================3 Works================================================--%>
 <section id="works" class="works clearfix">
     <div class="container">
         <div class="row">
 
             <div class="sec-title text-center">
-                <h2>Works</h2>
+                <h2>图片</h2>
                 <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
             </div>
 
             <div class="sec-sub-title text-center">
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore</p>
+                <p>飞鸿雪泥，不过留下的是一些爪印，而我，是不常在雪泥里休息的，我所飞过的天空并没有留下痕迹。</p>
             </div>
 
             <div class="work-filter wow fadeInRight animated" data-wow-duration="500ms">
                 <ul class="text-center">
-                    <li><a href="javascript:;" data-filter="all" class="active filter">All</a></li>
-                    <li><a href="javascript:;" data-filter=".branding" class="filter">Branding</a></li>
-                    <li><a href="javascript:;" data-filter=".web" class="filter">web</a></li>
-                    <li><a href="javascript:;" data-filter=".logo-design" class="filter">logo design</a></li>
-                    <li><a href="javascript:;" data-filter=".photography" class="filter">photography</a></li>
+                    <li><a href="javascript:;" data-filter="all" class="active filter">总览</a></li>
+                    <li><a href="javascript:;" data-filter=".branding" class="filter">人物</a></li>
+                    <li><a href="javascript:;" data-filter=".web" class="filter">风景</a></li>
+                    <li><a href="javascript:;" data-filter=".logo-design" class="filter">物品</a></li>
+                    <li><a href="javascript:;" data-filter=".photography" class="filter">回忆</a></li>
                 </ul>
             </div>
 
@@ -288,14 +289,10 @@ Our Works
 </section>
 <div class="copyrights">Collect from RockyRoll</div>
 
-<!--
-End Our Works
-==================================== -->
+<%--=====================================3 Works end================================================--%>
 
-<!--
-Meet Our Team
-==================================== -->
 
+<%--=====================================4 Team================================================--%>
 <section id="team" class="team">
     <div class="container">
         <div class="row">
@@ -388,15 +385,11 @@ Meet Our Team
         </div>
     </div>
 </section>
+<%--=====================================4 Team end================================================--%>
 
-<!--
-End Meet Our Team
-==================================== -->
 
-<!--
-Some fun facts
-==================================== -->
 
+<%--===================================== fact================================================--%>
 <section id="facts" class="facts">
     <div class="parallax-overlay">
         <div class="container">
@@ -446,15 +439,10 @@ Some fun facts
         </div>
     </div>
 </section>
-
-<!--
-End Some fun facts
-==================================== -->
+<%--=====================================facts================================================--%>
 
 
-<!--
-Contact Us
-==================================== -->
+<%--=====================================Contact================================================--%>
 
 <section id="contact" class="contact">
     <div class="container">
@@ -522,9 +510,7 @@ Contact Us
 
 </section>
 
-<!--
-End Contact Us
-==================================== -->
+<%--=====================================Contacts end================================================--%>
 
 
 <footer id="footer" class="footer">
