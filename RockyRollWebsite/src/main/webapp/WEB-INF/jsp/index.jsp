@@ -37,8 +37,9 @@
                 <li class="current"><a href="#body">首页</a></li>
                 <li><a href="#features">内容</a></li>
                 <li><a href="#works">相册</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#team">成员</a></li>
+                <li><a href="#facts">统计</a></li>
+                <li><a href="#contact">联系</a></li>
             </ul>
         </nav>
         <!-- /main nav -->
@@ -298,7 +299,7 @@
         <div class="row">
 
             <div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
-                <h2>Meet Our Team</h2>
+                <h2>成员</h2>
                 <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
             </div>
 
@@ -396,7 +397,7 @@
             <div class="row number-counters">
 
                 <div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
-                    <h2>Some Fun Facts</h2>
+                    <h2>统计</h2>
                     <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
                 </div>
 
@@ -449,7 +450,7 @@
         <div class="row mb50">
 
             <div class="sec-title text-center mb50 wow fadeInDown animated" data-wow-duration="500ms">
-                <h2>Let’s Discuss</h2>
+                <h2>联系</h2>
                 <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>
             </div>
 

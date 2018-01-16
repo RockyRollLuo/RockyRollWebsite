@@ -23,6 +23,8 @@
         2).允许使用 "/" 做整体映射
     -->
     <mvc:default-servlet-handler/>
+    <mvc:resources location="resource" mapping="/*"/>
+
 
     <!--3：配置JSP 显示ViewResolver-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -32,5 +34,7 @@
     </bean>
 
     <!--4:扫描web相关的controller-->
-    <context:component-scan base-package="cn.codingxiaxw.web"/>
+    <context:component-scan base-package="indi.rocky.web"/>
+
+
 </beans>
