@@ -17,17 +17,18 @@
 
 <!-- CSS -->
 <!-- Fontawesome Icon font -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/font-awesome.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/common/font-awesome.min.css">
 <!-- Twitter Bootstrap css -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/bootstrap.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/common/bootstrap.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/common/bootstrap-theme.min.css">
 <!-- jquery.fancybox  -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/jquery.fancybox.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/common/jquery.fancybox.css">
 <!-- animate -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/animate.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/common/animate.css">
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/main.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/common/main.css">
 <!-- media-queries -->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/media-queries.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resource/css/common/media-queries.css">
 
 <!-- Modernizer Script for old Browsers -->
-<script src="<%=request.getContextPath()%>/resource/js/modernizr-2.6.2.min.js"></script>
+<script src="<%=request.getContextPath()%>/resource/js/common/modernizr-2.6.2.min.js"></script>

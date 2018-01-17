@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class indexController {
 
-    private static final Logger logger= LoggerFactory.getLogger(indexController.class);
+    private static final Logger logger = LoggerFactory.getLogger(indexController.class);
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index() {
@@ -19,6 +19,13 @@ public class indexController {
     @RequestMapping(value = "/error", method = {RequestMethod.GET, RequestMethod.POST})
     public String error() {
         return "error";
+    }
+
+
+    @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
+    public String signup() {
+
+        return "login";
     }
 
 

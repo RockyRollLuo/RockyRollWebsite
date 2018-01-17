@@ -40,6 +40,7 @@
                 <li><a href="#team">成员</a></li>
                 <li><a href="#facts">统计</a></li>
                 <li><a href="#contact">联系</a></li>
+                <li><a href="<%=request.getContextPath()%>/login">登录</a></li>
             </ul>
         </nav>
         <!-- /main nav -->
