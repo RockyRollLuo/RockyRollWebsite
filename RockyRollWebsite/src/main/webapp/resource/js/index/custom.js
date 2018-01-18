@@ -70,7 +70,7 @@ $(document).ready(function(){
 		closeEffect : 'elastic',
 		closeSpeed  : 550,
 
-		closeClick : true,
+		closeClick : true
 	});
 	
 	/* ========================================================================= */
@@ -141,8 +141,8 @@ function initialize() {
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        icon: 'img/location-icon.png',
-        title: '',
+        icon: '/resource/img/index/location-icon.png',
+        title: ''
     });
 
 }

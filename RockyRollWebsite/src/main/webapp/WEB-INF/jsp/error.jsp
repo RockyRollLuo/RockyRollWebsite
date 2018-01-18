@@ -1,35 +1,36 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" pageEncoding="utf-8" %>
 <%@include file="common/tag.jsp" %>
+<% String basePath=request.getContextPath();%>
 <!DOCTYPE html>
 <html>
 <head>
     <%@include file="common/head.jsp" %>
     <title>别瞎点！</title>
-    <link rel="shortcut icon" href="<%=request.getContextPath()%>/resource/img/favicon.png">
+    <link rel="shortcut icon" href="<%=basePath%>/resource/img/favicon.png">
     <!-- Bootstrap -->
-    <link href="<%=request.getContextPath()%>/resource/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="<%=request.getContextPath()%>/resource/assets/css/font-awesome.css" rel="stylesheet">
-    <link href="<%=request.getContextPath()%>/resource/assets/css/bootstrap-theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/resource/assets/css/animations.css">
+    <link href="<%=basePath%>/resource/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<%=basePath%>/resource/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="<%=basePath%>/resource/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="<%=basePath%>/resource/assets/css/animations.css">
 
     <!-- siimple style -->
-    <link href="<%=request.getContextPath()%>/resource/assets/css/style.css" rel="stylesheet">
+    <link href="<%=basePath%>/resource/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="cloud floating">
-    <img src="<%=request.getContextPath()%>/resource/assets/img/cloud.png" alt="Scoop Themes">
+    <img src="<%=basePath%>/resource/assets/img/cloud.png" alt="Scoop Themes">
 </div>
 
 <div class="cloud pos1 fliped floating">
-    <img src="<%=request.getContextPath()%>/resource/assets/img/cloud.png" alt="Scoop Themes">
+    <img src="<%=basePath%>/resource/assets/img/cloud.png" alt="Scoop Themes">
 </div>
 
 <div class="cloud pos2 floating">
-    <img src="<%=request.getContextPath()%>/resource/assets/img/cloud.png" alt="Scoop Themes">
+    <img src="<%=basePath%>/resource/assets/img/cloud.png" alt="Scoop Themes">
 </div>
 
 <div class="cloud pos3 fliped floating">
-    <img src="<%=request.getContextPath()%>/resource/assets/img/cloud.png" alt="Scoop Themes">
+    <img src="<%=basePath%>/resource/assets/img/cloud.png" alt="Scoop Themes">
 </div>
 
 
@@ -37,7 +38,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <img src="<%=request.getContextPath()%>/resource/assets/img/logo.png" alt="Scoop Themes Logo">
+                <img src="<%=basePath%>/resource/assets/img/logo.png" alt="Scoop Themes Logo">
                 <br/>
                 <br/>
                 <h2 class="subtitle">We're working hard to launch our website and we'll be ready very soon</h2>
@@ -60,8 +61,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3">
-                <p class="copyright">Copyright &copy; 2018 - Collect from RockyRoll</a>
-                </p>
+                <p class="copyright">Copyright &copy; 2018 - RockyRoll.cs</p>
             </div>
         </div>
     </div>

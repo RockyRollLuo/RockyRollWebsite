@@ -2,8 +2,10 @@ package indi.rocky.dao;
 
 import indi.rocky.entity.SuccessKilled;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public interface SuccessKilledDao {
 
     /**

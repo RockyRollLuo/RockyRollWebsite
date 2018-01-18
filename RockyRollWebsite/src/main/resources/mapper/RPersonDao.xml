@@ -18,5 +18,11 @@
         WHERE person_type=#{personType}
     </select>
 
+    <select id="queryOneByEmailAndPassword" resultType="RPerson" parameterMap="RPerson">
+        SELECT *
+        FROM rperson
+        WHERE email=#{email}
+        AND password=#{password}
+    </select>
 
 </mapper>

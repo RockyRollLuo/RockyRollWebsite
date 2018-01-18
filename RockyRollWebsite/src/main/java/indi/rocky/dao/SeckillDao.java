@@ -2,6 +2,7 @@ package indi.rocky.dao;
 
 import indi.rocky.entity.Seckill;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * Created by codingBoy on 16/11/26.
  */
+@Repository
 public interface SeckillDao
 {
 
