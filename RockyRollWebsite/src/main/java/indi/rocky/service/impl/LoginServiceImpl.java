@@ -8,11 +8,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
-
-@Service
+@Transactional
+@Service("")
 public class LoginServiceImpl implements LoginService {
     //日志对象
     private Logger logger = LoggerFactory.getLogger(this.getClass());
