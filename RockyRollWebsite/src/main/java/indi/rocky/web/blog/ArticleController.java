@@ -69,13 +69,6 @@ public class ArticleController {
         return "admin/index";
     }
 
-    @RequestMapping("/sang/login")
-    public String login() {
-        return "admin/login";
-    }
-
-
-
 
     @RequestMapping(method = RequestMethod.GET, value = "/sang/dologin")
     public String doLogin(HttpServletRequest request, Model model) {
