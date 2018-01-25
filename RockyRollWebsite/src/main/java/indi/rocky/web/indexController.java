@@ -84,12 +84,11 @@ public class indexController {
     /**
      * 登录验证
      *
-     * @param model
      * @return
      */
     @RequestMapping(value = "/loginValidatioin", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public CommonDto loginValidatioin(Model model,
+    public CommonDto loginValidatioin(HttpServletRequest request,
                                    @RequestParam(value = "email") String email,
                                    @RequestParam(value = "password") String password) {
         CommonDto<UserDto> commonDto = new CommonDto<UserDto>();
@@ -104,7 +103,9 @@ public class indexController {
                 commonDto.setMessage("无法获取用户数据信息");
             } else {
                 commonDto.setCode(CommonDtoCodeEnum.SUCCESS.getState());
-                commonDto.setMessage("以获取用户信息！");
+                commonDto.setMessage("已获取用户信息！");
+                //session中存入用户信息
+                request.getSession().setAttribute("userDto",userDto);
             }
         } catch (Exception e) {
             commonDto.setCode(CommonDtoCodeEnum.EXCEPTION.getState());

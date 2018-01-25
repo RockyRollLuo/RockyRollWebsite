@@ -9,9 +9,9 @@
         <welcome-file>/WEB-INF/jsp/index.jsp</welcome-file>
     </welcome-file-list>
 
-    
-<!--用maven创建的web-app需要修改servlet的版本为3.1-->
-<!--配置DispatcherServlet-->
+
+    <!--用maven创建的web-app需要修改servlet的版本为3.1-->
+    <!--配置DispatcherServlet-->
     <servlet>
         <servlet-name>RockyRollWebsite-dispatcher-servlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -32,6 +32,9 @@
     </servlet-mapping>
 
 
+    <!--配置登录拦截器-->
+
+
 
     <!--配置错误界面-->
     <error-page>
@@ -45,7 +48,8 @@
 
     <!--设置网页图标-->
     <icon>
-        <large-icon>/resource/favicon.png</large-icon>
+        <large-icon>/resource/img/favicon.png</large-icon>
     </icon>
+
 
 </web-app>

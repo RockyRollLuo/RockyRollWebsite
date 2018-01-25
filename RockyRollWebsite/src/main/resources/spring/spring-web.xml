@@ -36,5 +36,17 @@
     <!--4:扫描web相关的controller-->
     <context:component-scan base-package="indi.rocky.web"/>
 
+    <!--登录拦截器-->
+    <mvc:interceptors>
+        <!---对所有的请求记性拦截-->
+        <!--<beans:bean class="com.sunp.common.interceptor.Myinterceptor"/>-->
+        <!--对特定的请求进行拦截-->
+        <mvc:interceptor>
+            <mvc:mapping path="/blog/*"/>
+            <mvc:mapping path="/photo/*"/>
+            <bean class="indi.rocky.util.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 
 </beans>
