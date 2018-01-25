@@ -18,39 +18,37 @@
 
             <!-- Start Sign In Form -->
             <form action="#" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
-                <h2>Sign Up</h2>
+                <h2>注册</h2>
                 <div class="form-group">
-                    <div class="alert alert-success" role="alert">Your info has been saved.</div>
+                    <div class="alert alert-success" role="alert">信息已保存！</div>
                 </div>
                 <div class="form-group">
-                    <label for="name" class="sr-only">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name" autocomplete="off">
+                    <label for="name" class="sr-only">姓名</label>
+                    <input type="text" class="form-control" id="name" placeholder="用户名" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <label for="email" class="sr-only">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Email" autocomplete="off">
+                    <label for="email" class="sr-only">邮箱</label>
+                    <input type="email" class="form-control" id="email" placeholder="邮箱" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off">
+                    <label for="password" class="sr-only">密码</label>
+                    <input type="password" class="form-control" id="password" placeholder="密码" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <label for="re-password" class="sr-only">Re-type Password</label>
-                    <input type="password" class="form-control" id="re-password" placeholder="Re-type Password" autocomplete="off">
+                    <label for="re-password" class="sr-only">确认密码</label>
+                    <input type="password" class="form-control" id="re-password" placeholder="确认密码" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <label for="remember"><input type="checkbox" id="remember"> Remember Me</label>
+                    <label for="remember"><input type="checkbox" id="remember">记住我</label>
                 </div>
                 <div class="form-group">
-                    <p>Already registered? <a href="<%=basePath%>/login">Sign In</a></p>
+                    <p>已经注册? <a href="<%=basePath%>/login">登录</a></p>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Sign Up" class="btn btn-primary">
+                    <input type="submit" value="提交" id="sign-up-submit" class="btn btn-primary">
                 </div>
             </form>
             <!-- END Sign In Form -->
-
-
         </div>
     </div>
     <div class="row" style="padding-top: 60px; clear: both;">

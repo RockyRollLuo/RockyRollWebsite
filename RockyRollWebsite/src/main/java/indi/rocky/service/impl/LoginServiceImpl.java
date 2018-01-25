@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 
 @Transactional
-@Service("")
+@Service
 public class LoginServiceImpl implements LoginService {
     //日志对象
     private Logger logger = LoggerFactory.getLogger(this.getClass());

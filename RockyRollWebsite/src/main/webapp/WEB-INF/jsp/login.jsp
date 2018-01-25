@@ -18,28 +18,27 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 col-md-push-8">
 
             <!-- Start Sign In Form -->
-            <%--<form action="loginValidatioin" class="fh5co-form animate-box"  data-animate-effect="fadeInRight">--%>
-            <form action="login-validatioin" class="fh5co-form animate-box" >
-                <h2>Sign In</h2>
+            <form action="loginValidatioin" class="fh5co-form" method="post">
+                <h2>登录</h2>
                 <div class="form-group">
-                    <label for="username" class="sr-only">Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Username" autocomplete="off">
+                    <label for="username" class="sr-only">用户名:</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="邮箱地址" autocomplete="off" value="${signInName}">
                 </div>
                 <div class="form-group">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off">
+                    <label for="password" class="sr-only">密码</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="密码" autocomplete="off" value="${signInPw}">
                 </div>
                 <div class="form-group">
-                    <label for="remember"><input type="checkbox" id="remember"> Remember Me</label>
+                    <label for="remember"><input type="checkbox" id="remember" name="remember">记住我</label>
                 </div>
                 <div class="form-group">
-                    <p>Not registered? <a href="sign-up">Sign Up</a> | <a href="forgot">Forgot Password?</a></p>
+                    <p>未注册? <a href="sign-up">注册</a> | <a href="forgot">忘记密码?</a></p>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Sign In" class="btn btn-primary">
+                    <input type="submit" value="登录" id="login-submit" class="btn btn-primary">
                 </div>
             </form>
             <!-- END Sign In Form -->
@@ -52,6 +51,6 @@
 </div>
 
 <%@include file="common/bottomjs.jsp" %>
-<%--<script src="<%=basePath%>/resource/js/login/main.js"></script>--%>
+<script src="<%=basePath%>/resource/js/login/main.js"></script>
 </body>
 </html>

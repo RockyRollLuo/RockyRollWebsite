@@ -11,8 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
-import javax.jws.soap.SOAPBinding;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 public class indexController {
@@ -23,22 +27,47 @@ public class indexController {
     @Autowired
     private LoginService loginService;
 
+    /**
+     * 进入首页
+     * @return
+     */
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index() {
+
         return "index";
     }
 
+    /**
+     * 进入错误页
+     * @return
+     */
     @RequestMapping(value = "/error", method = {RequestMethod.GET, RequestMethod.POST})
     public String error() {
         return "error";
     }
 
-
+    /**
+     * 进入登录页
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/login", method = {RequestMethod.GET, RequestMethod.POST})
-    public String login() {
-
-        return "login";
+    public ModelAndView login(HttpServletRequest request) {
+        Map<String,Object> model=new HashMap<String,Object>();
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null && cookies.length > 0) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("signInName")) {
+                    model.put("signInName", cookie.getValue());
+                }
+                if (cookie.getName().equals("signInPw")) {
+                    model.put("signInPw", cookie.getValue());
+                }
+            }
+        }
+        return new ModelAndView("login",model);
     }
+
 
     @RequestMapping(value = "/sign-up", method = {RequestMethod.GET, RequestMethod.POST})
     public String signup() {
@@ -58,13 +87,13 @@ public class indexController {
      * @param model
      * @return
      */
-    @RequestMapping(value = "/login-validatioin", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/loginValidatioin", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String loginValidatioin(Model model,
-                                   @RequestParam(value = "email",required = true)String email,
-                                   @RequestParam(value = "password",required = true)String password) {
+    public CommonDto loginValidatioin(Model model,
+                                   @RequestParam(value = "email") String email,
+                                   @RequestParam(value = "password") String password) {
         CommonDto<UserDto> commonDto = new CommonDto<UserDto>();
-        RPerson rPerson=new RPerson();
+        RPerson rPerson = new RPerson();
         rPerson.setEmail(email);
         rPerson.setPassword(password);
         try {
@@ -73,7 +102,7 @@ public class indexController {
             if (userDto == null) {
                 commonDto.setCode(CommonDtoCodeEnum.FAIL.getState());
                 commonDto.setMessage("无法获取用户数据信息");
-            }else {
+            } else {
                 commonDto.setCode(CommonDtoCodeEnum.SUCCESS.getState());
                 commonDto.setMessage("以获取用户信息！");
             }
@@ -81,9 +110,7 @@ public class indexController {
             commonDto.setCode(CommonDtoCodeEnum.EXCEPTION.getState());
             commonDto.setMessage("获取用户信息异常！");
         }
-
-
-        return "login";
+        return commonDto;
     }
 
     @RequestMapping(value = "/content/{type}", method = {RequestMethod.GET, RequestMethod.POST})
@@ -93,9 +120,9 @@ public class indexController {
         if (type.equalsIgnoreCase("interest")) {
             retval = "content/interest";
         } else if (type.equalsIgnoreCase("work")) {
-            retval="content/work";
+            retval = "content/work";
         } else if (type.equalsIgnoreCase("fun")) {
-            retval="content/fun";
+            retval = "content/fun";
         }
         return retval;
     }

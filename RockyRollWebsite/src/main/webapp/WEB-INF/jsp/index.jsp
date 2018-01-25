@@ -49,7 +49,6 @@
             </ul>
         </nav>
         <!-- /main nav -->
-
     </div>
 </header>
 
@@ -154,7 +153,7 @@
             <div class="col-md-4 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms">
                 <div class="service-item" onclick="window.location.href='<%=basePath%>/content/work'">
                     <div class="service-icon">
-                        <i class="fa fa-pencil fa-2x"></i>
+                        <a href="blog/index"><i class="fa fa-pencil fa-2x"></i></a>
                     </div>
 
                     <div class="service-desc">
@@ -607,20 +606,6 @@
 <%@include file="common/bottomjs.jsp" %>
 <script src="<%=basePath%>/resource/js/index/custom.js"></script>
 <script src="<%=basePath%>/resource/js/index/jquery-countTo.js"></script>
-<script type="text/javascript">
-    function signIn() {
-        window.location.href="<%=basePath%>/login";
-    }
-    var wow = new WOW({
-            boxClass: 'wow',      // animated element css class (default is wow)
-            animateClass: 'animated', // animation css class (default is animated)
-            offset: 120,          // distance to the element when triggering the animation (default is 0)
-            mobile: false,       // trigger animations on mobile devices (default is true)
-            live: true        // act on asynchronously loaded content (default is true)
-        }
-    );
-    wow.init();
-</script>
 <script type="text/javascript">
     $(function () {
         /* ========================================================================= */
