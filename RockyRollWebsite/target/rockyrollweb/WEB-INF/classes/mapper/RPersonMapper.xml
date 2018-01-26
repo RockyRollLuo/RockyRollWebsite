@@ -1,0 +1,21 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="indi.rocky.dao.RPersonDao">
+    <!--目的:为dao接口方法提供sql语句配置
+    即针对dao接口中的方法编写我们的sql语句-->
+
+    <select id="queryOneById" resultType="indi.rocky.entity.RPerson" parameterType="int">
+        SELECT *
+        FROM rperson
+        WHERE id=#{id}
+    </select>
+
+    <select id="queryListByType" resultType="indi.rocky.entity.RPerson" parameterType="int">
+        SELECT *
+        FROM rperson
+        ORDER BY create_time DESC
+        WHERE person_type=#{personType}
+    </select>
+
+</mapper>

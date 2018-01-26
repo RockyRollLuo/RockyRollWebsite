@@ -4,6 +4,7 @@ import indi.rocky.dao.ArticleDao;
 import indi.rocky.entity.Article;
 import indi.rocky.entity.Category;
 import indi.rocky.service.ArticleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -16,6 +17,7 @@ import java.util.List;
  */
 @Service
 public class ArticleServiceImpl implements ArticleService {
+
     @Resource
     private ArticleDao articleDao;
 

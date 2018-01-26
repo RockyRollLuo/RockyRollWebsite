@@ -9,21 +9,22 @@ import java.util.List;
 
 @Repository
 public interface ArticleDao {
-    public Article getArticleById(@Param("id") Long id);
 
-    public List<Article> getFirst10Article();
+    Article getArticleById(@Param("id") Long id);
 
-    public List<Article> getArticlesByCategoryName(Long categoryId);
+    List<Article> getFirst10Article();
 
-    public List<Category> getCategories();
+    List<Article> getArticlesByCategoryName(Long categoryId);
 
-    public void writeBlog(Article article);
+    List<Category> getCategories();
 
-    public Long getCategoryIdByName(String name);
+    void writeBlog(Article article);
 
-    public void deleteArticleById(Long id);
+    Long getCategoryIdByName(String name);
 
-    public void updateArticleById(Article article);
+    void deleteArticleById(Long id);
 
-    public Category getCategoryById(Long id);
+    void updateArticleById(Article article);
+
+    Category getCategoryById(Long id);
 }

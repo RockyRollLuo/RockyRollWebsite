@@ -86,32 +86,43 @@ public class indexController {
      *
      * @return
      */
-    @RequestMapping(value = "/loginValidatioin", method = {RequestMethod.GET, RequestMethod.POST})
-    @ResponseBody
-    public CommonDto loginValidatioin(HttpServletRequest request,
-                                   @RequestParam(value = "email") String email,
+    @RequestMapping(value = "/loginValidatioin", method = RequestMethod.POST)
+    public String loginValidatioin(HttpServletRequest request,
+                                   Model model,
+                                   @RequestParam(value = "username") String username,
                                    @RequestParam(value = "password") String password) {
         CommonDto<UserDto> commonDto = new CommonDto<UserDto>();
         RPerson rPerson = new RPerson();
-        rPerson.setEmail(email);
+        rPerson.setEmail(username);
         rPerson.setPassword(password);
-        try {
-            UserDto userDto = loginService.getUserDto(rPerson);
-            commonDto.setData(userDto);
-            if (userDto == null) {
-                commonDto.setCode(CommonDtoCodeEnum.FAIL.getState());
-                commonDto.setMessage("无法获取用户数据信息");
-            } else {
-                commonDto.setCode(CommonDtoCodeEnum.SUCCESS.getState());
-                commonDto.setMessage("已获取用户信息！");
-                //session中存入用户信息
-                request.getSession().setAttribute("userDto",userDto);
-            }
-        } catch (Exception e) {
-            commonDto.setCode(CommonDtoCodeEnum.EXCEPTION.getState());
-            commonDto.setMessage("获取用户信息异常！");
-        }
-        return commonDto;
+//        try {
+//            UserDto userDto = loginService.getUserDto(rPerson);
+//            commonDto.setData(userDto);
+//            if (userDto == null) {
+//                commonDto.setCode(CommonDtoCodeEnum.FAIL.getState());
+//                commonDto.setMessage("无法获取用户数据信息");
+//            } else {
+//                commonDto.setCode(CommonDtoCodeEnum.SUCCESS.getState());
+//                commonDto.setMessage("已获取用户信息！");
+//                //session中存入用户信息
+//                request.getSession().setAttribute("userDto",userDto);
+//            }
+//        } catch (Exception e) {
+//            commonDto.setCode(CommonDtoCodeEnum.EXCEPTION.getState());
+//            commonDto.setMessage("获取用户信息异常！");
+//        }
+
+        /**test**/
+        UserDto userDto=new UserDto();
+        userDto.setEmail(username);
+        userDto.setName("testRockyRoll");
+        userDto.setNickName("testNickName");
+        request.getSession().setAttribute("userDto",userDto);
+        model.addAttribute("userDto",userDto);
+
+        /**test-end**/
+
+        return "index";
     }
 
     @RequestMapping(value = "/content/{type}", method = {RequestMethod.GET, RequestMethod.POST})

@@ -17,7 +17,6 @@ import java.util.List;
 /**
  * 用户登录的一些服务
  */
-@Service
 public interface LoginService {
 
     /**

@@ -2,11 +2,10 @@ package indi.rocky.service;
 
 import indi.rocky.entity.Article;
 import indi.rocky.entity.Category;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface ArticleService {
 
     Article getArticleById(Long id);

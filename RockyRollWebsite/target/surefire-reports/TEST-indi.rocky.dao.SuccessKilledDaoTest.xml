@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0" errors="0" skipped="0" tests="2" name="indi.rocky.dao.SuccessKilledDaoTest">
+  <properties>
+    <property name="idea.version" value="2017.2.5"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\SoftwareInstall\java7\jdk\jre\bin"/>
+    <property name="java.vm.version" value="24.71-b01"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\IDEA\RockyRollWebsite\RockyRollWebsite"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\IDEA\RockyRollWebsite\RockyRollWebsite"/>
+    <property name="java.runtime.version" value="1.7.0_71-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\SoftwareInstall\java7\jdk\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\luoqi3\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="D:\SoftwareInstall\IntelliJ IDEA 2017.2.5\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\SoftwareInstall\java7\jdk\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;D:\SoftwareInstall\python\python36\;D:\SoftwareInstall\python\python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Lenovo\Touch Fingerprint Software\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;D:\SoftwareInstall\Git\cmd;D:\SoftwareInstall\java7\jdk\bin;D:\SoftwareInstall\apache-maven-3.2.3\bin;D:\SoftwareInstall\Redis;D:\SoftwareInstall\scala\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\SoftwareInstall\Node.js\;D:\SoftwareInstall\gradle-2.10\bin;D:\SoftwareInstall\cmder;D:\SoftwareInstall\TortoiseGit\bin;D:\SoftwareInstall\Anaconda3\Scripts;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\luoqi3\AppData\Roaming\npm;E:\BigDataEnv\hadoop-2.5.2\bin;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\luoqi3"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="luoqi3"/>
+    <property name="java.class.path" value="D:\SoftwareInstall\IntelliJ IDEA 2017.2.5\plugins\maven\lib\maven3\boot\plexus-classworlds-2.5.2.jar;D:\SoftwareInstall\IntelliJ IDEA 2017.2.5\lib\idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\SoftwareInstall\java7\jdk\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2017.2.5 install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_71"/>
+    <property name="java.ext.dirs" value="D:\SoftwareInstall\java7\jdk\jre\lib\ext;C:\windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\SoftwareInstall\java7\jdk\jre\lib\resources.jar;D:\SoftwareInstall\java7\jdk\jre\lib\rt.jar;D:\SoftwareInstall\java7\jdk\jre\lib\sunrsasign.jar;D:\SoftwareInstall\java7\jdk\jre\lib\jsse.jar;D:\SoftwareInstall\java7\jdk\jre\lib\jce.jar;D:\SoftwareInstall\java7\jdk\jre\lib\charsets.jar;D:\SoftwareInstall\java7\jdk\jre\lib\jfr.jar;D:\SoftwareInstall\java7\jdk\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\SoftwareInstall\IntelliJ IDEA 2017.2.5\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0" classname="indi.rocky.dao.SuccessKilledDaoTest" name="insertSuccessKilled"/>
+  <testcase time="0" classname="indi.rocky.dao.SuccessKilledDaoTest" name="queryByIdWithSeckill"/>
+</testsuite>
